@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="container-fluid">
           {/* Link to the home page */}
           <Link to="/home" className="navbar-brand">
-            Bad Bank
+            Fullstack Bank Application
           </Link>
           <button
             className="navbar-toggler"

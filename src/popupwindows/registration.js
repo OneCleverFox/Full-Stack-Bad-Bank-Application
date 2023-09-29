@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import User from "../data/user";
 import useUserContext from "../data/useContext";
 import Avatar from "../components/avatar";
+//import { auth, firestore } from '.../firebase'
+
 
 
 // Import validation library and components from MUI
@@ -133,7 +135,7 @@ const RegisterPopUp = ({ handleClose }) => {
                 <p>Would you like to add another account?</p>
                 <Box m={2} className="custom-btn-group">
                   <Button
-                    variant="contained"
+                    variant="contained"                    
                     style={cancelButtonStyles}
                     type="submit"
                     onClick={handleClosePopUp}

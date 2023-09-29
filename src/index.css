@@ -1,5 +1,6 @@
 :root{
   --maincolor: #cfcfce;
+  --fontcolor: #050505;
 }
 
 
@@ -8,7 +9,7 @@ body {
    
   /* Text and font styles */
   background-color: #e9e8e8;
-  color: #253237;
+  color:var(--fontcolor);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -37,6 +38,7 @@ code {
   align-items: center;
   justify-content: center;
   gap: 15px;
+  
 }
 
 /* Styles for a card */
@@ -52,12 +54,12 @@ code {
 
 /* Styles for the navigation links on hover */
 .nav-link:hover {
-  color:#000000;
+  color:var(--fontcolor);
 }
 
 /* General button styles */
 .btn {
-  color: white;
+  color: var(--fontcolor);
   background-color: var(--maincolor);
 }
 
@@ -68,13 +70,13 @@ code {
 
 /* Navigation item styles on hover */
 .nav-item:hover {
-  background-color: #c2c1c16c;
+  background-color: #c1c2c16c;
   border-radius: 3px;
 }
 
 /* Styles for the card titles */
 .card-title {
-  color: #212529;
+  color: var(--fontcolor);
   font-size: 35px;
   text-align: center;
 }
@@ -82,7 +84,7 @@ code {
 /* Styles for the popup box */
 .popup-box {
   position: fixed;
-  background: #00000050;
+  background: #ffffff50;
   width: 100%;
   height: 100vh;
   top: 0;

@@ -34,8 +34,8 @@ const Home = () => {
       {/* Card container */}
       <div className="card-container">
         <div className="card" style={customStyles}>
-          <h5 className="card-title">Bad Bank</h5>
-          <img src="/images/fox-in-suits.jpg" className="card-img-top" alt="..." />
+          <h5 className="card-title">Fullstack <br></br>Bank Application</h5>
+          <img src="/images/main-background.jpg" className="card-img-top" alt="..." />
           <div className="card-body">
             <p className="card-text">
               Welcome to our "Bad Bank Application"! Where a clever fox securely safeguards your money - though he doesn't use it for nightly adventures!<br></br><br></br>

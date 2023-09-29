@@ -1,64 +1,61 @@
-// Import the 'useUserContext' 
+// Importiere die notwendigen Abhängigkeiten und Komponenten
+import React from "react";
 import useUserContext from "../data/useContext";
-
-// Import required components from '@mui/material' library
+import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 
-// Define the 'AllData' component
+// Definiere die 'AllData' Komponente
 const AllData = () => {
-  // Access the 'user' object using the 'useUserContext' hook
-  const { user } = useUserContext();
+  // Greife auf den Benutzerkontext zu, um den eingeloggten Benutzer zu erhalten
+  const { loggedInUser } = useUserContext();
 
-  // Map through the 'user' array and create a 'TableRow' for each user
-  const usersList = user.map((user, i) => {
+  // Überprüfe, ob ein Benutzer eingeloggt ist
+  if (!loggedInUser) {
+    // Wenn kein Benutzer eingeloggt ist, zeige eine Nachricht oder leite ihn zur Login-Seite weiter
     return (
-      <TableRow
-        key={i}
-        sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-      >
-        <TableCell component="th" scope="row">
-          {user.name}
-        </TableCell>
-        <TableCell align="right">{user.email}</TableCell>
-        <TableCell align="right">{user.password}</TableCell>
-        <TableCell align="right">{user.balance}€</TableCell>
-      </TableRow>
+      <div>
+        <h3>All Data</h3>
+        <p>Please login to your account</p>
+        {/* Füge hier einen Link zur Login-Seite hinzu */}
+      </div>
     );
-  });
+  }
 
-  // Return the content of the component
+  // Wenn ein Benutzer eingeloggt ist, zeige seine Daten
   return (
     <>
-      {/* Heading */}
-      <h1>AllData</h1>
+      {/* Überschrift */}
+      <h1>User</h1>
       <br />
-      {/* TableContainer for Paper */}
+      {/* Tabelle zur Anzeige der Benutzerdaten */}
       <TableContainer component={Paper}>
-        {/* Table */}
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          {/* TableHead */}
           <TableHead>
             <TableRow>
-              {/* Table Headers */}
               <TableCell>Name</TableCell>
               <TableCell align="right">Email</TableCell>
               <TableCell align="right">Password</TableCell>
-              <TableCell align="right">Balance</TableCell>
+              <TableCell align="right">Kontostand</TableCell>
             </TableRow>
           </TableHead>
-          {/* TableBody containing the mapped 'usersList' */}
-          <TableBody>{usersList}</TableBody>
+          <TableBody>
+            <TableRow>
+              <TableCell>{loggedInUser.name}</TableCell>
+              <TableCell align="right">{loggedInUser.email}</TableCell>
+              <TableCell align="right">{loggedInUser.password}</TableCell>
+              <TableCell align="right">{loggedInUser.balance}€</TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
       </TableContainer>
     </>
   );
 };
 
-// Export the 'AllData' component as the default export
+// Exportiere die 'AllData' Komponente als Standardexport
 export default AllData;
