@@ -6,7 +6,7 @@ Certainly! Here's the extended README.md file with Docker instructions in Englis
 
 ## Project Title
 
-M.I.T. Fullstack Application
+M.I.T. Fullstack-Application
 
 ## Description/Motivation
 
