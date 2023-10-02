@@ -2,21 +2,21 @@ Certainly! Here's the extended README.md file with Docker instructions in Englis
 
 **README.md**
 
-# M.I.T. Frontend Application
+# M.I.T. Fullstack Application
 
 ## Project Title
 
-M.I.T. Frontend Application
+M.I.T. Fullstack Application
 
 ## Description/Motivation
 
-The M.I.T. Frontend Application is a fully functional React-based web application that serves as the frontend for the Massachusetts Institute of Technology (M.I.T.) banking application. This project was developed as part of a course to showcase skills acquired in full-stack development.
+The M.I.T. Fullstack Application is a fully functional React-based web application that serves as the frontend for the Massachusetts Institute of Technology (M.I.T.) banking application. This project was developed as part of a course to showcase skills acquired in full-stack development.
 
 Our aim was to create a user-friendly application that enables users to perform banking transactions, manage their account information, and leverage the benefits of modern web technologies.
 
 ## Installation Guidelines
 
-To run the M.I.T. Frontend Application on your local machine, follow these steps:
+To run the M.I.T. Fullstack Application on your local machine, follow these steps:
 
 1. **Install Docker**: Ensure that you have Docker installed on your system.
 
@@ -26,10 +26,10 @@ To run the M.I.T. Frontend Application on your local machine, follow these steps
 
    ```bash
    # Build Docker image (execute in the project directory)
-   docker build -t mit-frontend-app .
+   docker build -t mit-fullstack-app .
 
    # Run Docker container and start the application
-   docker run -p 3000:3000 mit-frontend-app
+   docker run -p 3000:3000 mit-fullstack-app
    ```
 
    The application should now be running at `http://localhost:3000`.
@@ -61,7 +61,7 @@ To run the M.I.T. Frontend Application on your local machine, follow these steps
 
 ## License
 
-The M.I.T. Frontend Application is open source and available under the [MIT License](LICENSE). You are welcome to use, modify, and distribute the code according to the terms of the license.
+The M.I.T. Fullstack Application is open source and available under the [MIT License](LICENSE). You are welcome to use, modify, and distribute the code according to the terms of the license.
 
 ## Author
 
@@ -69,6 +69,6 @@ This application was developed by OneCleverFox.
 
 ## Acknowledgments
 
-Special thanks to the Massachusetts Institute of Technology for inspiring this frontend application.
+Special thanks to the Massachusetts Institute of Technology for inspiring this Fullstack application.
 
 Let's get started! We hope you can successfully use the M.I.T. Fullstack Application and look forward to your feedback and contributions.
